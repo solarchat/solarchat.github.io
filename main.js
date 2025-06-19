@@ -10,7 +10,7 @@ let myID=-1;
 let socket;
 
 try {
-    socket = new WebSocket("ws://team.solarorbit.net:8001");
+    socket = new WebSocket("wss://team.solarorbit.net");
 } catch (e) {}
 
 function inputInfo() {
