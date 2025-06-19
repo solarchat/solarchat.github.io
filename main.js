@@ -7,7 +7,11 @@ let datetime = "unknown datetime";
 let receiving = "uninitialized";
 let connected = false;
 let myID=-1;
-let socket = new WebSocket("ws://team.solarorbit.net:8001");
+let socket;
+
+try {
+    socket = new WebSocket("ws://team.solarorbit.net:8001");
+} catch (e) {}
 
 function inputInfo() {
     if (document.getElementById("username_input").value !== "") {
